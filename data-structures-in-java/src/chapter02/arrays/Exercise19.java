@@ -4,9 +4,10 @@
 package chapter02.arrays;
 
 /** Exercise 2.19
+ * @author Leo Nataj
  * Data Structures with Java, Second Edition, John R. Hubbard, 
  * Schaum’s Outline Series
- * @author Leo Nataj
+ * 
  * The Sieve of Eratosthenes is an array of boolean elements whose ith element is true if and
  * only if i is a prime number. 
  * Use the following algorithm to compute and print a sieve of size 1000:
