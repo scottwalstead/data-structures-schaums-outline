@@ -23,7 +23,6 @@ public class Exercise10 {
 	}
 	
 	/** reverses the elements of a[]
-	 * @param args
 	 */
 	public static int[] reverse(int[] a) {
 		return IntStream.range(0, a.length)
