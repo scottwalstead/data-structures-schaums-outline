@@ -20,17 +20,17 @@ public class Exercise11 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// testInteger();
+		testInteger();
+		testString();
+	}
+
+	public static void testString() {
 		String[] x = {"She", "is", "mad"};
 		String[] y = {"But", "it", "is", "Alright"};
 		String[] result = concatenate(x, y);
 		System.out.println(Arrays.toString(result));
-		
 	}
-	
-	
-	
-	
+
 	public static void testInteger() {
 		Integer[] x = {2, 4, 3, 5};
 		Integer[] y = {-2, 14, 3, 5};
@@ -45,7 +45,7 @@ public class Exercise11 {
         ArrayList<T> result = new ArrayList<T>();
         for (T[] x : arrays)
             Collections.addAll(result, x);
-        return (T[]) result.toArray(arrays[0].clone());
+        return (T[]) result.toArray(arrays[0]);
     }
 	
 	
