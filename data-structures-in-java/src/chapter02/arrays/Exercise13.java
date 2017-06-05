@@ -14,7 +14,7 @@ import java.util.stream.*;
 public class Exercise13 {
 
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(tally("abda")));
+		System.out.println(Arrays.toString(tally("abdagh")));
 
 	}
 	
@@ -23,10 +23,10 @@ public class Exercise13 {
 	*/
 	public static int[] tally(String string) {
 		char[] charArray = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-		int[] result = new int[26];
+		int[] result = new int[26]; // declarations and instantiation
 		for (int i=0; i<26; i++) {
 			char ch = charArray[i];
-			result[i] = (int) string.chars().filter(s -> s == ch).count();
+			result[i] = (int) string.chars().filter(s -> s == ch).count(); // using Lambda in Java 8
 		}
 		return result;
 	}
