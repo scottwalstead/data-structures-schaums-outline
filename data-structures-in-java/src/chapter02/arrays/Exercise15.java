@@ -1,5 +1,8 @@
 package chapter02.arrays;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 
 
 /**  Exercise 2.15
@@ -11,7 +14,12 @@ package chapter02.arrays;
 public class Exercise15 {
 
 	public static void main(String[] args) {
-		
+		double[] x = {0.1, 0.2, 0.4, 0.0};
+		double[] y = {1.0, 1.0, -4.0, 15.0};
+		System.out.printf("The outer product is equal to:n");
+		System.out.printf("/n");
+		Stream.of(outerProduct(x, y))
+			.forEach(s -> System.out.println(Arrays.toString(s)));
 
 	}
 	
