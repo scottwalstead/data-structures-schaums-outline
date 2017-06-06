@@ -1,12 +1,11 @@
 package chapter02.arrays;
 
-import java.util.List;
-import java.util.stream.DoubleStream;
+
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 
-/**  Exercise 2.143
+
+/**  Exercise 2.14
  * @author Leo Nataj
  * Data Structures with Java, Second Edition, John R. Hubbard,
  * Schaum’s Outline Series
