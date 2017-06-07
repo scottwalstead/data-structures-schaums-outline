@@ -11,7 +11,9 @@ package chapter02.arrays;
 public class Exercise17 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Sample2DArray arr = new Sample2DArray(3, 2);
+		arr.display();
+		
 
 	}
 
