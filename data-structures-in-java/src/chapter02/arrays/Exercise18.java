@@ -1,5 +1,7 @@
 package chapter02.arrays;
 
+import java.util.Arrays;
+import java.util.function.IntSupplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -12,19 +14,26 @@ import java.util.stream.Stream;
 public class Exercise18 {
 
 	public static void main(String[] args) {
-		int[] prevRow = {1, 5, 10, 10, 5, 1};
-		IntStream.range(0,7).forEach(i -> System.out.println(calcElement(i, prevRow)));
+		
 	}
 
 	/** returns Pascal’s triangle of the given size
-	
+	*/
 	public static int[][] pascal(int size) {
-	/** int[][] result = new int[size][size];
-	Stream.builder().
-	for (int i=1; i<size; i++) {	
-		int IntStream.range(0, i).map(i -> result[i-1][] - z[i]).toArray();
+	int[][] pascalTri = new int[size][size];
+	pascalTri[0][0] = 1;
+	pascalTri[0][0] = 1;
+	pascalTri[1][0] = 1;	
+	for (int i=2; i<size; i++) {	
+		int elementIndex = i;
+		pascalTri[i]= IntStream.generate(
+				() -> calcElement(elementIndex, pascalTri[elementIndex-1]))
+				.toArray()
+				.clone();
 	}
-	} */
+	return pascalTri;
+	
+	} 
 	
 	public static int calcElement(int index, int[] prevRow) {
 		if (index>0 && index<prevRow.length) {
