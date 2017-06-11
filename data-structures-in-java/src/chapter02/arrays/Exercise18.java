@@ -1,11 +1,6 @@
 package chapter02.arrays;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.function.IntSupplier;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**  Exercise 2.18
  * @author Leo Nataj
@@ -48,6 +43,6 @@ public class Exercise18 {
 		}
 		
 			
-		}
 	}
+}
 
