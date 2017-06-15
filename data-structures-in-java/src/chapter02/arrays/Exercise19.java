@@ -3,6 +3,8 @@
  */
 package chapter02.arrays;
 
+import java.util.Arrays;
+
 /** Exercise 2.19
  * @author Leo Nataj
  * Data Structures with Java, Second Edition, John R. Hubbard, 
@@ -17,4 +19,34 @@ package chapter02.arrays;
  */
 public class Exercise19 {
 
+	public static void main(String[] args) {
+		
+		
+		System.out.println(Arrays.toString(sieve(11)));
+	}
+	
+	public static boolean[] sieve(int num) {
+		boolean[] arr = new boolean[num];
+		arr[0] = arr[1] = false;
+		for (int i=2; i<num; i++) {
+			arr[i] = isPrimeNumber(i);
+		}
+		return arr;
+	}
+
+	public static boolean isPrimeNumber(int i) {
+        int factors = 0;
+        int j = 1;
+
+        while(j <= i) {
+            if(i % j == 0){
+                factors++;
+            }
+            j++;
+        }
+        return (factors == 2);
+	}
 }
+
+
+
