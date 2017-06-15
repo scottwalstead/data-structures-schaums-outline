@@ -4,6 +4,7 @@
 package chapter02.arrays;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 /** Exercise 2.19
  * @author Leo Nataj
@@ -20,13 +21,13 @@ import java.util.Arrays;
 public class Exercise19 {
 
 	public static void main(String[] args) {
+		Boolean[] result = sieve(1000);
 		
-		
-		System.out.println(Arrays.toString(sieve(11)));
+		Arrays.stream(result).forEach(System.out::println);
 	}
 	
-	public static boolean[] sieve(int num) {
-		boolean[] arr = new boolean[num];
+	public static Boolean[] sieve(int num) {
+		Boolean[] arr = new Boolean[num];
 		arr[0] = arr[1] = false;
 		for (int i=2; i<num; i++) {
 			arr[i] = isPrimeNumber(i);
