@@ -1,29 +1,30 @@
 package chapter02.arrays;
 
+import java.util.BitSet;
 import java.util.Vector;
 
-/**  Exercise 2.20
+
+/**  Exercise 2.21
  * @author Leo Nataj
  * Data Structures with Java, Second Edition, John R. Hubbard,
  * Schaum’s Outline Series
  */
 
 
-public class Exercise20 {
+public class Exercise21 {
 
-	// Repeat Problem 2.19 using a java.util.Vector object.
+	// Repeat Problem 2.19 using a java.util.BitSet object.
 	
 	public static void main(String[] args) {
-		Vector<Boolean> result = sieve(1000);
+	    BitSet result = sieve(1000);
 		result.stream().forEach(System.out::println);
 	}
 	
-	public static Vector<Boolean> sieve(int size) {
-		Vector<Boolean> p = new Vector<>();
-		p.add(0, false);
-		p.add(1, false);
+	public static BitSet sieve(int size) {
+		BitSet p = new BitSet(size);
+				
 		for (int i=2; i<size; i++) {
-			p.add(i, isPrimeNumber(i));
+			if (isPrimeNumber(i)) p.set(i);
 		}
 		return p;
 	}
