@@ -10,10 +10,12 @@ package chapter03.linkedlist;
 public class Exercise03 {
 
 	public static void main(String[] args) {
-		Node list = new Node();
-		list.insert(3);
-		
-
+		Node list = new Node(11);
+		list.insert(22);
+		for (int i = 1; i < 5; i++) {
+			list.insert(22 + 11*i);
+		}
+		System.out.printf("The linkedlist has %d elements", size(list));
 	}
 	
 	public static int size(Node list) {
