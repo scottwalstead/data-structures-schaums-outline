@@ -9,9 +9,18 @@ package chapter03.linkedlist;
  * Schaum’s Outline Series
  */
 
-public class LinkedList {
+public class Node {
 
 	private Node start;
+	int data;
+	Node next;
+	
+	
+	public Node(int data, Node next) {
+		super();
+		this.data = data;
+		this.next = next;
+	}
 
 	public void insert(int x) {
 		// precondition: the list is in ascending order;
@@ -24,7 +33,7 @@ public class LinkedList {
 		if (p.next.data > x) break;
 		p = p.next;
 		}
-		p.next = new Node(x,p.next);
+		p.next = new Node(x, p.next);
 	}
 
 	public void delete(int x) {
@@ -43,15 +52,5 @@ public class LinkedList {
 			}
 		}
 	}
-	private static class Node {
-		int data;
-		Node next;
-		public Node(int data) {
-			this.data = data;
-		}
-		public Node(int data, Node next) {
-			this.data = data;
-			this.next = next;
-		}
-	}
+	
 }
