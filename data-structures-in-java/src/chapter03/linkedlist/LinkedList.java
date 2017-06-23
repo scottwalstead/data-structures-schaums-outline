@@ -14,11 +14,34 @@ public class LinkedList {
 	private Node start;
 
 	public void insert(int x) {
-		// Insert lines 2-14 of Example 3.12 on page 58
+		// precondition: the list is in ascending order;
+		// postconditions: the list is in ascending order, and it contains x;
+		if (start == null || start.data > x) {
+			start = new Node(x,start);
+		}
+		Node p=start;
+		while (p.next != null) {
+		if (p.next.data > x) break;
+		p = p.next;
+		}
+		p.next = new Node(x,p.next);
 	}
 
 	public void delete(int x) {
-		// Insert lines 2-18 of Example 3.13 on page 59
+		// precondition: the list is in ascending order;
+		// postconditions: the list is in ascending order; 
+		// it contains x, then the first occurrence of x has been deleted;
+		if (start.data == x) { // x is the first element in the list
+			start = start.next;
+		}
+		for (Node p = start; p.next != null; p = p.next) {
+			if (p.next.data > x) {
+				break; // x is not in the list
+			} else if (p.next.data == x) { // x is in the p.next node
+				p.next = p.next.next; // delete it
+				break;
+			}
+		}
 	}
 	private static class Node {
 		int data;
