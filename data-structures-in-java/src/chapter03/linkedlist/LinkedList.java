@@ -21,6 +21,14 @@ public class LinkedList {
 		// Insert lines 2-18 of Example 3.13 on page 59
 	}
 	private static class Node {
-		// Insert lines 2-12 of Example 3.10 on page 56
+		int data;
+		Node next;
+		public Node(int data) {
+			this.data = data;
+		}
+		public Node(int data, Node next) {
+			this.data = data;
+			this.next = next;
+		}
 	}
 }
