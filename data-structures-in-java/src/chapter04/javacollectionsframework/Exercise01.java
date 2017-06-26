@@ -13,7 +13,8 @@ import java.util.*;
 public class Exercise01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		List<String> testString = Arrays.asList("One", "of", "us", "cels");
+		System.out.printf("The number of characters in all strings is:%n%d", chars(testString));
 
 	}
 	
@@ -21,7 +22,9 @@ public class Exercise01 {
 	*/
 	 
 	public static int chars(List<String> strs) {
-		return strs.stream().mapToInt(s -> s.split(s).length).sum();
+		return strs.stream().mapToInt(s -> s.toCharArray().length).sum();
 	}
-
+	
+	
+	
 }
