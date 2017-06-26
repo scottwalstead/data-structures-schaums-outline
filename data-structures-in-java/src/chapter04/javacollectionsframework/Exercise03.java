@@ -11,13 +11,14 @@ import java.util.*;
 public class Exercise03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		List<String> testList = Arrays.asList("james", "john", "james", "anishtosh", "singh", "Chao");
+		System.out.printf("Number of occrance of %s is %n%d", "singh", frequency(testList, "singh"));
 
 	}
 
 	/** returns the number of occurrences of e in c
 	*/
 	public static <E> int frequency(Collection<E> c, E e) {
-		return (int) c.stream().filter(s -> s.equals(e)).count();
+		return c.stream().mapToInt(s -> (s.equals(e))? 1:0).sum();
 	}
 }
