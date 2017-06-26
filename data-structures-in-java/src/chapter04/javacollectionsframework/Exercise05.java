@@ -2,7 +2,7 @@ package chapter04.javacollectionsframework;
 import java.util.Arrays;
 import java.util.List;
 
-/** Exercise 4.04
+/** Exercise 4.05
  * @author Mr. Leo Nataj
   * Data Structures with Java, Second Edition, John R. Hubbard,
  * Schaum’s Outline Series
