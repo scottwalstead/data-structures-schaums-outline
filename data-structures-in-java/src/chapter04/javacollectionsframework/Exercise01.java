@@ -20,11 +20,8 @@ public class Exercise01 {
 	
 	/** returns the total number of characters in all the strings.
 	*/
-	 
 	public static int chars(List<String> strs) {
 		return strs.stream().mapToInt(s -> s.toCharArray().length).sum();
 	}
-	
-	
 	
 }
