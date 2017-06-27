@@ -1,29 +1,25 @@
 package chapter06.queues;
-
 import java.util.*;
 import java.util.stream.*;
-/** Exercise 6.05
+/** Exercise 6.06
  * @author Mr. Leo Nataj
   * Data Structures with Java, Second Edition, John R. Hubbard,
  * Schaum’s Outline Series
  */
-public class Exrecise05 {
-
+public class Exercise06 {
 	public static void main(String[] args) {
 		Queue<String> q = new LinkedList<>();
 		Collections.addAll(q, "A", "B", "C", "D", "E", "F", "G", "H");
-		System.out.printf("the second element is: %n%s", secondElement(q));
+		System.out.printf("Last element is: %n%s", lastElement(q));
 		
 	}
 	
-	/**  returns the second element in the specified queue, leaving the
+	/**  returns the last element in the specified queue, leaving the
 	 * queue in its original state
 	 */
-	public static <E> E secondElement(Queue<E> queue) {
+	public static <E> E lastElement(Queue<E> queue) {
 		LinkedList<E> list = queue.stream().collect(Collectors.toCollection(LinkedList::new)); // convert from Queue to LinkedList
-		
-		return list.get(1);
+		return list.get(list.size()-1);
 		
 	}
-
 }
