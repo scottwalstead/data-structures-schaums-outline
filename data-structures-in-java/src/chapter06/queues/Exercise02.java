@@ -1,6 +1,6 @@
 package chapter06.queues;
 
-import java.io.ObjectInputStream.GetField;
+
 import java.util.*;
 import java.util.stream.*;
 
@@ -14,7 +14,7 @@ import java.util.stream.*;
 public class Exercise02 {
 
 	public static void main(String[] args) {
-		Queue<String> q = new LinkedList<String>();
+		Queue<String> q = new LinkedList<>();
 		Collections.addAll(q, "A", "B", "C", "D", "E", "F", "G", "H");
 		System.out.printf("The original Queue is %s", q);
 		Queue<String> r = reversed(q);
