@@ -1,7 +1,7 @@
 package chapter06.queues;
 import java.util.*;
 import java.util.stream.*;
-/** Exercise 6.06
+/** Exercise 6.07
  * @author Mr. Leo Nataj
   * Data Structures with Java, Second Edition, John R. Hubbard,
  * Schaum’s Outline Series
