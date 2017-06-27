@@ -28,7 +28,7 @@ public class Exercise02 {
 		LinkedList<E> list = queue.stream().collect(Collectors.toCollection(LinkedList::new)); // convert from Queue to LinkedList
 		
 		Iterator<E> it = list.descendingIterator();
-		Queue<E> result = new ArrayDeque<>();
+		Queue<E> result = new LinkedList<>();
 		
 		while (it.hasNext()) {
 			result.add(it.next());
