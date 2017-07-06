@@ -1,5 +1,6 @@
 package chapter07.lists;
 
+import java.io.ObjectInputStream.GetField;
 import java.util.*;
 import java.util.stream.*;
 
@@ -10,15 +11,18 @@ import java.util.stream.*;
  */
 public class Exercise01 {
 	public static void main(String[] args) {
-		System.out.println(genRandomLetter());
+		List<Integer> sample = Arrays.asList(1, 14, -2, 6, 78, 9);
+		loadRandomLetters(sample).forEach(System.out::println);
+		
 	}
 	
 	/** fills list with n randomly generated capital letters
 	 */
 	
-	public static void loadRandomLetters(LinkedList list, int n) {
-		
-		
+	public static <T> List<Character> loadRandomLetters(List<T> list) {
+		return Stream.generate(() -> genRandomLetter() )
+				.limit(list.size())
+				.collect(Collectors.toList());
 	}
 	
 	public static char genRandomLetter() {
