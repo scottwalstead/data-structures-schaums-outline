@@ -1,6 +1,5 @@
 package chapter07.lists;
 
-import java.io.ObjectInputStream.GetField;
 import java.util.*;
 import java.util.stream.*;
 
